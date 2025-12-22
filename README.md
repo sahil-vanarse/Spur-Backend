@@ -1,5 +1,7 @@
 # Spur AI Chat Agent - Backend
 
+**Live Demo API:** [https://spur-backend-qvca.onrender.com](https://spur-backend-qvca.onrender.com)
+
 Backend server for the AI-powered customer support chat agent. Built with Node.js, TypeScript, Express, Prisma, and PostgreSQL.
 
 ## 🚀 Quick Start
@@ -244,6 +246,14 @@ Make sure to set these in your deployment platform:
 - `DIRECT_URL`
 - `SUPABASE_URL`
 - `SUPABASE_ANON_KEY`
+
+### Deployment Steps (Example: Render)
+1. **Create new Web Service** on Render
+2. **Connect GitHub repository** (`Spur-Backend`)
+3. **Set Build Command**: `npm install && npx prisma generate`
+4. **Set Start Command**: `npx ts-node src/index.ts`
+5. **Add Environment Variables**: (Copy all from `.env` except `PORT`)
+6. **Deploy!**
 
 ## 🐛 Troubleshooting
 

@@ -242,20 +242,8 @@ Make sure to set these in your deployment platform:
 - `GROQ_API_KEY`
 - `DATABASE_URL`
 - `DIRECT_URL`
-
-### Recommended Platforms
-- **Render**: Easy Node.js deployment with PostgreSQL
-- **Railway**: Simple deployment with database included
-- **Heroku**: Classic PaaS with PostgreSQL add-on
-- **Fly.io**: Modern deployment platform
-
-### Deployment Steps (Example: Render)
-1. Create new Web Service
-2. Connect GitHub repository
-3. Set build command: `npm install && npx prisma generate && npm run build`
-4. Set start command: `npm start`
-5. Add environment variables
-6. Deploy!
+- `SUPABASE_URL`
+- `SUPABASE_ANON_KEY`
 
 ## 🐛 Troubleshooting
 
@@ -308,22 +296,5 @@ To add a new channel:
 - **No rate limiting**: Could add rate limiting per session/IP.
 - **Single region**: Database in one region. Could add read replicas.
 
-### If I Had More Time...
-- [ ] Add Redis caching for frequent queries
-- [ ] Implement rate limiting (express-rate-limit)
-- [ ] Add request logging and analytics
-- [ ] Create admin panel to update knowledge base
-- [ ] Add webhook support for real-time updates
-- [ ] Implement streaming responses (SSE)
-- [ ] Add comprehensive test suite
-- [ ] Set up CI/CD pipeline
-- [ ] Add monitoring and alerting (Sentry, DataDog)
-- [ ] Implement conversation export feature
 
-## 📄 License
-
-MIT
-
-## 👤 Author
-
-Built as part of Spur Founding Full-Stack Engineer take-home assignment.
+### Sahil Vanarse

@@ -6,8 +6,7 @@ https://github.com/user-attachments/assets/62c57a49-5d45-497d-b563-1f4b2cf5a59f
 
 **Video Demo:** 
 
-
-https://github.com/user-attachments/assets/3efdd644-8700-4bbf-ad85-c88a56c01593
+https://github.com/user-attachments/assets/d30abcbd-4491-4b0d-9704-54d60f965db1
 
 
 **Live Demo API:** [https://spur-backend-qvca.onrender.com](https://spur-backend-qvca.onrender.com)

@@ -4,9 +4,6 @@ https://github.com/user-attachments/assets/62c57a49-5d45-497d-b563-1f4b2cf5a59f
 
 **Backend Repository Link:** [https://github.com/sahil-vanarse/Spur-Frontend](https://github.com/sahil-vanarse/Spur-Frontend)
 
-**Video Demo:**
-https://github-production-user-asset-6210df.s3.amazonaws.com/119086415/529395799-6e994310-de8f-4503-bd2b-acd5bbff6efa.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251222%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251222T212059Z&X-Amz-Expires=300&X-Amz-Signature=1b2e2b70f4b101a7bc59436d34ab6f29e18f6890e530843a638c1b9ed522f0d6&X-Amz-SignedHeaders=host
-
 **Live Demo API:** [https://spur-backend-qvca.onrender.com](https://spur-backend-qvca.onrender.com)
 
 Backend server for the AI-powered customer support chat agent. Built with Node.js, TypeScript, Express, Prisma, and PostgreSQL.

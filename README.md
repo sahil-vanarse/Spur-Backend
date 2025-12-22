@@ -26,6 +26,8 @@ Backend server for the AI-powered customer support chat agent. Built with Node.j
    - `GROQ_API_KEY`: Your Groq API key from https://console.groq.com/keys
    - `DATABASE_URL`: PostgreSQL connection string (with connection pooling)
    - `DIRECT_URL`: Direct PostgreSQL connection string (for migrations)
+   - `SUPABASE_URL`: Supabase URL
+   - `SUPABASE_ANON_KEY`: Supabase anon key
 
 3. **Run database migrations**
    ```bash

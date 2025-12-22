@@ -6,12 +6,12 @@ dotenv.config();
 
 // Initialize OpenAI client
 const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 // Initialize Groq client
 const groq = new Groq({
-    apiKey: process.env.GROQ_API_KEY,
+  apiKey: process.env.GROQ_API_KEY,
 });
 
 // Type for supported LLM providers
@@ -311,43 +311,43 @@ RESPONSE GUIDELINES FOR AI AGENT
 `;
 
 export async function generateReply(
-    history: { role: 'user' | 'assistant', content: string }[],
-    userMessage: string,
-    provider: LLMProvider = 'groq' // Default to Groq
+  history: { role: 'user' | 'assistant', content: string }[],
+  userMessage: string,
+  provider: LLMProvider = 'groq' // Default to Groq
 ) {
-    try {
-        if (provider === 'openai') {
-            // OpenAI implementation
-            const response = await openai.chat.completions.create({
-                model: 'gpt-3.5-turbo',
-                messages: [
-                    { role: 'system', content: SYSTEM_PROMPT },
-                    ...history,
-                    { role: 'user', content: userMessage },
-                ],
-                max_tokens: 500,
-            });
+  try {
+    if (provider === 'openai') {
+      // OpenAI implementation
+      const response = await openai.chat.completions.create({
+        model: 'gpt-3.5-turbo',
+        messages: [
+          { role: 'system', content: SYSTEM_PROMPT },
+          ...history,
+          { role: 'user', content: userMessage },
+        ],
+        max_tokens: 500,
+      });
 
-            return response.choices[0]?.message?.content || "I'm sorry, I couldn't generate a reply.";
-        } else if (provider === 'groq') {
-            // Groq implementation
-            const response = await groq.chat.completions.create({
-                model: 'llama-3.3-70b-versatile', // Fast and high-quality model
-                messages: [
-                    { role: 'system', content: SYSTEM_PROMPT },
-                    ...history,
-                    { role: 'user', content: userMessage },
-                ],
-                max_tokens: 500,
-                temperature: 0.7,
-            });
+      return response.choices[0]?.message?.content || "I'm sorry, I couldn't generate a reply.";
+    } else if (provider === 'groq') {
+      // Groq implementation
+      const response = await groq.chat.completions.create({
+        model: 'llama-3.3-70b-versatile', // Fast and high-quality model
+        messages: [
+          { role: 'system', content: SYSTEM_PROMPT },
+          ...history,
+          { role: 'user', content: userMessage },
+        ],
+        max_tokens: 500,
+        temperature: 0.7,
+      });
 
-            return response.choices[0]?.message?.content || "I'm sorry, I couldn't generate a reply.";
-        } else {
-            throw new Error(`Unsupported provider: ${provider}`);
-        }
-    } catch (error) {
-        console.error(`LLM Error (${provider}):`, error);
-        throw new Error(`Failed to reach AI agent (${provider}). Please try again later.`);
+      return response.choices[0]?.message?.content || "I'm sorry, I couldn't generate a reply.";
+    } else {
+      throw new Error(`Unsupported provider: ${provider}`);
     }
+  } catch (error) {
+    console.error(`LLM Error (${provider}):`, error);
+    throw new Error(`Failed to reach AI agent (${provider}). Please try again later. Or you have reached your limit, please try to use Groq as it has free tokens.`);
+  }
 }

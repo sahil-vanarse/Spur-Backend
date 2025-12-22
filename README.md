@@ -4,10 +4,9 @@ https://github.com/user-attachments/assets/62c57a49-5d45-497d-b563-1f4b2cf5a59f
 
 **Backend Repository Link:** [https://github.com/sahil-vanarse/Spur-Frontend](https://github.com/sahil-vanarse/Spur-Frontend)
 
-**Video Demo:** 
+**Video Demo:**
 
-https://github.com/user-attachments/assets/d30abcbd-4491-4b0d-9704-54d60f965db1
-
+https://github.com/user-attachments/assets/6e994310-de8f-4503-bd2b-acd5bbff6efa
 
 **Live Demo API:** [https://spur-backend-qvca.onrender.com](https://spur-backend-qvca.onrender.com)
 

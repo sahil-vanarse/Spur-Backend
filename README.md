@@ -5,7 +5,11 @@
 
 **Live Demo API:** [https://spur-backend-qvca.onrender.com](https://spur-backend-qvca.onrender.com)
 
-**Video Demo:** https://github.com/user-attachments/assets/6e994310-de8f-4503-bd2b-acd5bbff6efa
+**Video Demo:** 
+
+
+https://github.com/user-attachments/assets/2a5c1ca9-11c1-44c6-855e-1316952dc69f
+
 
 Backend server for the AI-powered customer support chat agent. Built with Node.js, TypeScript, Express, Prisma, and PostgreSQL.
 

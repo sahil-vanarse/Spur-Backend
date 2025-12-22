@@ -39,10 +39,10 @@ export const handleChatMessage = async (req: Request, res: Response) => {
         });
 
         // Prepare history for LLM
-        const history = conversation.messages.map((msg) => ({
+        const history = conversation.messages ? conversation.messages.map((msg) => ({
             role: msg.sender === 'user' ? 'user' as const : 'assistant' as const,
             content: msg.text,
-        }));
+        })) : [];
 
         // Generate AI reply with selected provider
         const reply = await generateReply(history, message, selectedProvider);
@@ -65,6 +65,10 @@ export const handleChatMessage = async (req: Request, res: Response) => {
 
 export const getChatHistory = async (req: Request, res: Response) => {
     const { sessionId } = req.params;
+
+    if (!sessionId) {
+        return res.status(400).json({ error: 'Session ID is required.' });
+    }
 
     try {
         const conversation = await prisma.conversation.findUnique({

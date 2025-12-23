@@ -7,9 +7,7 @@
 
 **Video Demo:** 
 
-
-https://github.com/user-attachments/assets/2a5c1ca9-11c1-44c6-855e-1316952dc69f
-
+https://github.com/user-attachments/assets/7dcd94a8-a7b5-4bfb-912e-59b9d8031ec8
 
 Backend server for the AI-powered customer support chat agent. Built with Node.js, TypeScript, Express, Prisma, and PostgreSQL.
 
